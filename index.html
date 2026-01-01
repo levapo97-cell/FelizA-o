@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feliz Año Nuevo 2026 💖</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;500&display=swap"
+        rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -44,8 +47,17 @@
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0px); opacity: 0.3; }
-            50% { transform: translateY(-20px); opacity: 0.8; }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+                opacity: 0.3;
+            }
+
+            50% {
+                transform: translateY(-20px);
+                opacity: 0.8;
+            }
         }
 
         /* Contenedor principal */
@@ -69,6 +81,7 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -139,6 +152,7 @@
             from {
                 opacity: 0;
             }
+
             to {
                 opacity: 1;
             }
@@ -332,6 +346,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Partículas de fondo -->
     <div class="particles" id="particles"></div>
@@ -367,17 +382,41 @@
         <div id="unlockedContent" class="unlocked-content">
             <div class="dedication">
                 <p><strong>Amor,</strong></p>
-                
-                <p>Quiero que sepa que la quiero muchísimo. Este año ha sido muy especial para mí, y sin duda usted ha sido lo mejor que me pasó. Gracias por ser como es conmigo, por su apoyo, su cariño y por estar siempre a mi lado.</p>
-                
-                <p>Me siento muy agradecido con Dios por haberla puesto en mi camino. De corazón espero que este nuevo año usted esté a mi lado, que sigamos creciendo juntos, apoyándonos y construyendo algo bonito día a día.</p>
-                
-                <p>Le pido a Dios que nos dé fuerzas para seguir adelante, para superar cualquier dificultad y para cuidar siempre el amor y el respeto que nos tenemos. Yo quiero seguir caminando con usted, compartiendo mi vida, mis sueños y todo lo que soy.</p>
-                
-                <p><strong>La quiero mucho 💕</strong></p>
-                
-                <p class="signature">Con mucho amor,<br>su Ron Ron 🐱💙</p>
+
+                <p>
+                    Quiero que sepa que la quiero muchísimo y que este año usted ha sido, sin duda,
+                    lo mejor que me pasó. Gracias por ser mi duende favorito, mi princesa,
+                    por su apoyo y por estar siempre a mi lado, incluso cuando las cosas no son fáciles.
+                </p>
+
+                <p>
+                    Sé que a veces he sido incomprensible y le agradezco de corazón por aguantarme
+                    y por su paciencia. De verdad, espero que este nuevo año sigamos juntos,
+                    creciendo, planeando cosas bonitas y disfrutando momentos agradables a su lado.
+                </p>
+
+                <p>
+                    También quiero decirle que, aunque sé que la vida no siempre es sencilla,
+                    me ilusiona muchísimo la idea de un futuro con usted. Si Dios quiere y se da
+                    la oportunidad de tener una familia, me encantaría que fuera con usted.
+                    Que sepa que es mi mayor motivación para superarme y seguir adelante,
+                    porque su apoyo me inspira a ser mejor cada día.
+                </p>
+
+                <p>
+                    Así que en este año que viene, deseo que esté conmigo en cada paso,
+                    que si hay viajes o planes, los hagamos juntos. Quiero que siempre sepa
+                    que la quiero y que es muy especial para mí.
+                </p>
+                <p class="signature">
+                    <em>P.D. Me muero de ganas por verla, amor 💕</em>
+                </p>
+                <p class="signature">
+                    Con mucho amor,<br>
+                    su ron ron ❤️💕🥰
+                </p>
             </div>
+
         </div>
     </div>
 
@@ -410,21 +449,21 @@
         function createFirework(x, y) {
             const colors = ['#ffffff', '#c0c0c0', '#a8a8a8', '#d4d4d4'];
             const particles = 30;
-            
+
             for (let i = 0; i < particles; i++) {
                 const particle = document.createElement('div');
                 particle.className = 'firework-particle';
                 particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
                 particle.style.left = x + 'px';
                 particle.style.top = y + 'px';
-                
+
                 const angle = (Math.PI * 2 * i) / particles;
                 const velocity = 2 + Math.random() * 3;
                 const vx = Math.cos(angle) * velocity;
                 const vy = Math.sin(angle) * velocity;
-                
+
                 document.body.appendChild(particle);
-                
+
                 animateFireworkParticle(particle, vx, vy);
             }
         }
@@ -435,24 +474,24 @@
             let y = parseFloat(particle.style.top);
             let opacity = 1;
             let gravity = 0.1;
-            
+
             function animate() {
                 x += vx;
                 y += vy;
                 vy += gravity;
                 opacity -= 0.015;
-                
+
                 particle.style.left = x + 'px';
                 particle.style.top = y + 'px';
                 particle.style.opacity = opacity;
-                
+
                 if (opacity > 0) {
                     requestAnimationFrame(animate);
                 } else {
                     particle.remove();
                 }
             }
-            
+
             animate();
         }
 
@@ -460,12 +499,12 @@
         function launchFireworks() {
             const count = 15;
             let launched = 0;
-            
+
             const interval = setInterval(() => {
                 const x = Math.random() * window.innerWidth;
                 const y = Math.random() * (window.innerHeight * 0.6);
                 createFirework(x, y);
-                
+
                 launched++;
                 if (launched >= count) {
                     clearInterval(interval);
@@ -502,9 +541,10 @@
         // Inicializar
         createParticles();
         updateCountdown();
-        
+
         // Actualizar cada segundo
         setInterval(updateCountdown, 1000);
     </script>
 </body>
+
 </html>
