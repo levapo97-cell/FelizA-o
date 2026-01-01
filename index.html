@@ -23,7 +23,9 @@
             align-items: center;
             background: #0a0a0a;
             position: relative;
-            overflow: hidden;
+            overflow-x: hidden;
+            overflow-y: auto;
+            padding: 20px 0;
         }
 
         /* Partículas plateadas de fondo */
@@ -74,6 +76,9 @@
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
             text-align: center;
             animation: fadeIn 1.2s ease;
+            margin: 20px auto;
+            max-height: none;
+            overflow: visible;
         }
 
         @keyframes fadeIn {
@@ -416,13 +421,11 @@
                     su ron ron ❤️💕🥰
                 </p>
             </div>
-
         </div>
     </div>
 
     <script>
-        // Fecha objetivo: 1 de enero 2026, 00:00 (UTC-6, Honduras)
-        const targetDate = new Date('2026-01-01T00:07:00-06:00').getTime();
+        const targetDate = new Date('2026-01-01T00:08:00-06:00').getTime();
 
         // Elementos del DOM
         const countdownSection = document.getElementById('countdownSection');
